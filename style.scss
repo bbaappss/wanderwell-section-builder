@@ -22,29 +22,59 @@ body {
     right: 0;
     bottom: 0;
 
-    &.object-1 {
+    &.shoe {
         z-index: 1;
         bottom: 5%;
         width: 90%;
     }
 
-    &.object-2 {
+    &.bird {
         left: 2%;
         bottom: 45%;
         width: 42%;
+        animation: bird-vertical-move 1s ease-in-out forwards;
     }
 
-    &.object-3 {
+    &.flower-1 {
         bottom: 42%;
         left: 80%;
         right: inherit;
         width: 10%;
+        animation: flower-1-horizontal-move 1s ease-in-out forwards;    
     }
 
-    &.object-4 {
+    &.flower-2 {
         bottom: 5%;
         left: 77%;
         right: inherit;
-        width: 22%;
+        width: 19%;
+        animation: flower-2-horizontal-move 1s ease-in-out forwards;
+    }
+}
+
+@keyframes bird-vertical-move {
+    0% {
+        transform: translateY(15%) rotate(-10deg) scale(.8);
+    }
+    100% {
+        transform: translateY(0%) rotate(0deg) scale(1);
+    }
+}
+
+@keyframes flower-1-horizontal-move {
+    0% {
+        transform: translateX(-15%) rotate(-50deg);
+    }
+    100% {
+        transform: translateX(0%) rotate(0deg);
+    }
+}
+
+@keyframes flower-2-horizontal-move {
+    0% {
+        transform: translateX(-15%) rotate(50deg);
+    }
+    100% {
+        transform: translateX(0%) rotate(0deg);
     }
 }
