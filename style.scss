@@ -35,23 +35,29 @@ body {
         width: 36%;
         animation: 
             bird-vertical-move 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards,
-            // bird-fly-loop 6s 1.5s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
+            bird-post-intro-movement 5s 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
     }
 
     &.flower-1 {
+        opacity: 0;
         bottom: 44%;
         left: 80%;
         right: inherit;
         width: 10%;
-        animation: flower-1-horizontal-move 1s ease-in-out forwards;    
+        animation: 
+            flower-1-horizontal-move 1s ease-in-out forwards,
+            flower-rotate 5s 3s infinite forwards;
     }
 
     &.flower-2 {
+        opacity: 0;
         bottom: 7%;
         left: 77%;
         right: inherit;
         width: 18%;
-        animation: flower-2-horizontal-move 1s ease-in-out forwards;
+        animation: 
+            flower-2-horizontal-move 1s ease-in-out forwards,
+            flower-rotate-reverse 5s 3s infinite forwards;
     }
 }
 
@@ -65,6 +71,65 @@ body {
     }
 }
 
+@keyframes bird-post-intro-movement {
+    0% {
+        transform: rotate(0deg)
+    }
+    25% {
+        transform: rotate(-9deg)
+    }
+    50% {
+        transform: rotate(5deg)
+    }
+    75% {
+        transform: rotate(2deg)
+    }
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes bird-pause {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes pause-animation {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes flower-rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(360deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes flower-rotate-reverse {  
+    0% {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(-360deg)
+    }
+    100% {
+        transform: rotate(-360deg)
+    }
+}
 @keyframes flower-1-horizontal-move {
     0% {
         transform: translateY(30%) translateX(-65%) rotate(-180deg - 50deg);
