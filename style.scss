@@ -30,9 +30,9 @@ body {
     }
 
     &.bird {
-        left: 2%;
-        bottom: 45%;
-        width: 42%;
+        left: 4%;
+        bottom: 44%;
+        width: 36%;
         animation: 
             bird-vertical-move 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards,
             // bird-fly-loop 6s 1.5s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
@@ -47,7 +47,7 @@ body {
     }
 
     &.flower-2 {
-        bottom: 5%;
+        bottom: 7%;
         left: 77%;
         right: inherit;
         width: 18%;
@@ -57,7 +57,7 @@ body {
 
 @keyframes bird-vertical-move {
     0% {
-        transform: translateY(15%) rotate(-10deg) scale(.8);
+        transform: translateY(60%) rotate(-10deg) scale(.8);
         opacity: 0;
     }
     100% {
@@ -67,22 +67,22 @@ body {
 
 @keyframes flower-1-horizontal-move {
     0% {
-        transform: translateX(-15%) rotate(-180deg - 50deg);
+        transform: translateY(30%) translateX(-65%) rotate(-180deg - 50deg);
         opacity: 0;
     }
     100% {
-        transform: translateX(0%) rotate(0deg);
+        transform: translateY(0%) translateX(0%) rotate(0deg);
         opacity: 1;
     }
 }
 
 @keyframes flower-2-horizontal-move {
     0% {
-        transform: translateX(-15%) rotate(180deg + 50deg);
+        transform: translateY(-10%) translateX(-65%) rotate(180deg + 50deg);
         opacity: 0;
     }
     100% {
-        transform: translateX(0%) rotate(0deg);
+        transform: translateY(0%) translateX(0%) rotate(0deg);
         opacity: 1;
     }
 }
