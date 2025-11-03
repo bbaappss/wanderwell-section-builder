@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+}
+
+.animation-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 940 / 460;
+    height: auto;
+    background: rgba(237, 223, 199, 1);
+}
+
+.object {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &.object-1 {
+        z-index: 1;
+        bottom: 5%;
+        width: 90%;
+    }
+
+    &.object-2 {
+        left: 2%;
+        bottom: 45%;
+        width: 42%;
+    }
+
+    &.object-3 {
+        bottom: 42%;
+        left: 80%;
+        right: inherit;
+        width: 10%;
+    }
+
+    &.object-4 {
+        bottom: 5%;
+        left: 77%;
+        right: inherit;
+        width: 22%;
+    }
+}

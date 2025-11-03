@@ -3,116 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Elements</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Brazil Flower - Product Showcase</title>
 </head>
 <body>
-    <div class="spacer"></div>
-    
-    <div class="container">        
-        <img class="animate-fade" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
-        <img class="animate-slide" src="https://placehold.co/600x400" alt="Placeholder Image">
-        <div class="triangle animate-scale"></div>
-    </div>
-    
-    <div class="spacer"></div>
+    <div class="animation-container">
+            <img src="/images/shutterstock_347238617 copy 2.png" class="object object-1" />
+            <img src="/images/bird 1.png" class="object object-2"/>
+            <img src="/images/flower 1.png" class="object object-3"/>
+            <img src="/images/flower 2.png" class="object object-4"/>
+    </div>    
 </body>
 </html>
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: Arial, sans-serif;
-        background: linear-gradient(to bottom, #1a1a2e, #16213e);
-        min-height: 100vh;
-    }
-
-    .spacer {
-        height: 100vh;
-    }
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 60px;
-        padding: 100px 20px;
-        min-height: 100vh;
-    }
-
-    .triangle {
-        width: 100px;
-        height: 100px;
-        background: linear-gradient(135deg, #81ecec, #0984e3);
-        clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-    }
-
-    /* Animation keyframes */
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(50px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes slideIn {
-        from {
-            opacity: 0;
-            transform: translateX(-100px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    @keyframes scaleIn {
-        from {
-            opacity: 0;
-            transform: scale(0) rotate(0deg);
-        }
-        to {
-            opacity: 1;
-            transform: scale(1) rotate(360deg);
-        }
-    }
-
-    /* Apply animations with view timeline */
-    .animate-fade {
-        animation: fadeIn linear both;
-        animation-timeline: view();
-        animation-range: entry 0% cover 40%;
-    }
-
-    .animate-slide {
-        animation: slideIn linear both;
-        animation-timeline: view();
-        animation-range: entry 0% cover 40%;
-    }
-
-    .animate-scale {
-        animation: scaleIn linear both;
-        animation-timeline: view();
-        animation-range: entry 0% cover 40%;
-    }
-
-    /* Fallback for browsers that don't support animation-timeline */
-    @supports not (animation-timeline: view()) {
-        .animate-fade,
-        .animate-slide,
-        .animate-scale {
-            animation: none;
-            opacity: 1;
-            transform: none;
-        }
-    }
-</style>
