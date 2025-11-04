@@ -34,8 +34,8 @@ body {
         bottom: 44%;
         width: 36%;
         animation: 
-            bird-vertical-move 3s cubic-bezier(0.4, 0, 0.2, 1) forwards,
-            bird-post-intro-movement 5s 3.5s ease-in-out infinite;
+            bird-vertical-move 1s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+            bird-movement-loop 15s 2s ease-in-out infinite;
     }
 
     &.flower-1 {
@@ -71,21 +71,33 @@ body {
     }
 }
 
-@keyframes bird-post-intro-movement {
+@keyframes bird-movement-loop {
     0% {
-        transform: rotate(0deg) translateY(0%) translateX(0%)
+        transform: rotate(0deg) translateY(0%) translateX(0%);
+    }
+    16.67% {
+        transform: rotate(-8deg) translateY(5%) translateX(-5%);
     }
     25% {
-        transform: rotate(-8deg) translateY(5%) translateX(-5%)
+        transform: rotate(-8deg) translateY(5%) translateX(-5%);
+    }
+    41.67% {
+        transform: rotate(-12deg) translateY(-5%) translateX(4%);
     }
     50% {
-        transform: rotate(-12deg) translateY(-5%) translateX(4%)
+        transform: rotate(-12deg) translateY(-5%) translateX(4%);
+    }
+    66.67% {
+        transform: rotate(-15deg) translateY(0%) translateX(-5%);
     }
     75% {
-        transform: rotate(-15deg) translateY(0%) translateX(-5%)
+        transform: rotate(-15deg) translateY(0%) translateX(-5%);
+    }
+    91.67% {
+        transform: rotate(0deg) translateY(0%) translateX(0%);
     }
     100% {
-        transform: rotate(0deg) translateY(0%) translateX(0%)
+        transform: rotate(0deg) translateY(0%) translateX(0%);
     }
 }
 
