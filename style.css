@@ -19,7 +19,10 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  will-change: transform, opacity; }
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased; }
   .object.shoe {
     z-index: 1;
     bottom: 5%;
@@ -35,40 +38,40 @@ body {
     left: 80%;
     right: inherit;
     width: 10%;
-    animation: flower-1-horizontal-move 1s ease-in-out forwards, flower-rotate 5s 4s infinite forwards; }
+    animation: flower-1-horizontal-move 1s ease-in-out forwards, flower-rotate 4s 4s ease-in-out infinite forwards; }
   .object.flower-2 {
     opacity: 0;
     bottom: 7%;
     left: 77%;
     right: inherit;
     width: 18%;
-    animation: flower-2-horizontal-move 1s ease-in-out forwards, flower-rotate-reverse 5s 3s infinite forwards; }
+    animation: flower-2-horizontal-move 1s ease-in-out forwards, flower-rotate-reverse 4s 3s ease-in-out infinite forwards; }
 
 @keyframes bird-vertical-move {
   0% {
-    transform: translateY(100%) rotate(-50deg) scale(0.8);
+    transform: translate3d(0, 100%, 0) rotate(-50deg) scale(0.8);
     opacity: 0; }
   100% {
-    transform: translateY(0%) rotate(0deg) scale(1); } }
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1); } }
 @keyframes bird-movement-loop {
   0% {
-    transform: rotate(0deg) translateY(0%) translateX(0%); }
+    transform: rotate(0deg) translate3d(0%, 0%, 0); }
   16.67% {
-    transform: rotate(-8deg) translateY(5%) translateX(-5%); }
+    transform: rotate(-8deg) translate3d(-5%, 5%, 0); }
   25% {
-    transform: rotate(-8deg) translateY(5%) translateX(-5%); }
+    transform: rotate(-8deg) translate3d(-5%, 5%, 0); }
   41.67% {
-    transform: rotate(-12deg) translateY(-5%) translateX(4%); }
+    transform: rotate(-12deg) translate3d(4%, -5%, 0); }
   50% {
-    transform: rotate(-12deg) translateY(-5%) translateX(4%); }
+    transform: rotate(-12deg) translate3d(4%, -5%, 0); }
   66.67% {
-    transform: rotate(-15deg) translateY(0%) translateX(-5%); }
+    transform: rotate(-15deg) translate3d(-5%, 0%, 0); }
   75% {
-    transform: rotate(-15deg) translateY(0%) translateX(-5%); }
+    transform: rotate(-15deg) translate3d(-5%, 0%, 0); }
   91.67% {
-    transform: rotate(0deg) translateY(0%) translateX(0%); }
+    transform: rotate(0deg) translate3d(0%, 0%, 0); }
   100% {
-    transform: rotate(0deg) translateY(0%) translateX(0%); } }
+    transform: rotate(0deg) translate3d(0%, 0%, 0); } }
 @keyframes bird-pause {
   0% {
     transform: rotate(0deg); }
@@ -82,7 +85,7 @@ body {
 @keyframes flower-rotate {
   0% {
     transform: rotate(0deg); }
-  50% {
+  25% {
     transform: rotate(360deg); }
   100% {
     transform: rotate(360deg); } }
@@ -95,17 +98,17 @@ body {
     transform: rotate(-360deg); } }
 @keyframes flower-1-horizontal-move {
   0% {
-    transform: translateY(30%) translateX(-65%) rotate(-230deg);
+    transform: translate3d(-65%, 30%, 0) rotate(-230deg);
     opacity: 0; }
   100% {
-    transform: translateY(0%) translateX(0%) rotate(0deg);
+    transform: translate3d(0, 0, 0) rotate(0deg);
     opacity: 1; } }
 @keyframes flower-2-horizontal-move {
   0% {
-    transform: translateY(-10%) translateX(-65%) rotate(230deg);
+    transform: translate3d(-65%, -10%, 0) rotate(230deg);
     opacity: 0; }
   100% {
-    transform: translateY(0%) translateX(0%) rotate(0deg);
+    transform: translate3d(0, 0, 0) rotate(0deg);
     opacity: 1; } }
 
 /*# sourceMappingURL=style.css.map */
