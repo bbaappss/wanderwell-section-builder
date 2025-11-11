@@ -46,14 +46,15 @@ body {
   .object.brella-1 {
     z-index: 2;
     right: auto;
-    left: -5%;
-    bottom: 36%;
+    left: 0%;
+    bottom: 39%;
     animation: brella-1-rotation 10s infinite linear; }
   .object.brella-2 {
     z-index: 1;
     right: auto;
-    left: 15%;
-    bottom: 36%;
+    left: 21%;
+    width: 14%;
+    bottom: 42%;
     animation: brella-2-rotation 10s infinite linear; }
 
 @keyframes bird-1-movement-loop {
