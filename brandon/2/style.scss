@@ -5,7 +5,7 @@
 }
 
 body {
-    background: rgba(237, 223, 199, 1);
+    background: #fceaeb;
 }
 
 .animation-container {
@@ -28,27 +28,192 @@ body {
     -webkit-font-smoothing: antialiased;
 
     &.shoe {
-        z-index: 1;
+        z-index: 3;
         bottom: 5%;
         width: 90%;
     }
 
-    &.bird {
+    &.bird-1 {
         left: auto;
-        right: 17%;
-        bottom: 48%;
+        right: 27%;
+        bottom: 14%;
+        animation: bird-1-movement-loop 10s ease-in-out infinite;
+    }
+
+    &.bird-2 {
+        left: auto;
+        right: 16%;
+        bottom: 47%;
+        animation: bird-2-movement-loop 15s ease-in-out infinite;
+    }
+
+    &.bird-3 {
+        left: 35%;
+        right: auto;
+        bottom: 27%;
+        transform: scaleX(-1);
+        animation: bird-3-movement-loop 10s ease-in-out infinite;
     }
 
     &.brella-1 {
+        z-index: 2;
         right: auto;
         left: -5%;
         bottom: 36%;
-        z-index: 1;
+        animation: brella-1-rotation 10s infinite linear;
     }
 
     &.brella-2 {
+        z-index: 1;
         right: auto;
         left: 15%;
         bottom: 36%;
+        animation: brella-2-rotation 10s infinite linear;
+    }
+}
+
+@keyframes bird-1-movement-loop {
+    0% {
+        transform: translateY(0) scaleX(1);
+    }
+    15% {
+        transform: translateY(0) scaleX(1);
+    }
+    20% {
+        transform: translateY(-17%) scaleX(1);
+    }
+    23% {
+        transform: translateY(-15%) scaleX(1);
+    }
+    75% {
+        transform: translateY(-15%) scaleX(1);
+    }
+    100% {
+        transform: translateY(0) scaleX(1);
+    }
+}
+
+@keyframes bird-3-movement-loop {
+    0% {
+        transform: translateY(0) scaleX(-1);
+    }
+    19% {
+        transform: translateY(0) scaleX(-1);
+    }
+    24% {
+        transform: translateY(-17%) scaleX(-1);
+    }
+    28% {
+        transform: translateY(-15%) scaleX(-1);
+    }
+    85% {
+        transform: translateY(-15%) scaleX(-1);
+    }
+    75% {
+        transform: translateY(-15%) scaleX(-1);
+    }
+    100% {
+        transform: translateY(0) scaleX(-1);
+    }
+}
+
+
+
+@keyframes bird-2-movement-loop {
+    0% {
+        transform: translateY(0%) translateX(0) scaleX(1);
+    }
+    27% {
+        transform: translateY(0%) translateX(0) scaleX(1);
+    }
+    29% {
+        transform: translateY(-6%) translateX(-8%) scaleX(1);
+    }
+    30.5% {
+        transform: translateY(0%) translateX(-12%) scaleX(1);
+    }
+    32% {
+        transform: translateY(-6%) translateX(-20%) scaleX(1);
+    }
+    33.5% {
+        transform: translateY(0%) translateX(-24%) scaleX(1);
+    }
+    35% {
+        transform: translateY(-6%) translateX(-32%) scaleX(1);
+    }
+    37% {
+        transform: translateY(0%) translateX(-32%) scaleX(1);
+    }
+    47% {
+        transform: translateY(0%) translateX(-32%) scaleX(1);
+    }
+    48% {
+        transform: translateY(0%) translateX(-32%) scaleX(-1);
+    }
+    49% {
+        transform: translateY(0%) translateX(-32%) scaleX(-1);
+    }
+    60% {
+        transform: translateY(0%) translateX(-32%) scaleX(-1);
+    }
+    70% {
+        transform: translateY(0%) translateX(-32%) scaleX(-1);
+    }
+    72% {
+        transform: translateY(-6%) translateX(-24%) scaleX(-1);
+    }
+    74% {
+        transform: translateY(0%) translateX(-16%) scaleX(-1);
+    }
+    76% {
+        transform: translateY(-6%) translateX(-8%) scaleX(-1);
+    }
+    78% {
+        transform: translateY(0%) translateX(-4%) scaleX(-1);
+    }
+    80% {
+        transform: translateY(0%) translateX(0) scaleX(-1);
+    }
+    90% {
+        transform: translateY(0%) translateX(0) scaleX(-1);
+    }
+    99% {
+        transform: translateY(0%) translateX(0) scaleX(-1);
+    }
+    100% {
+        transform: translateY(0%) translateX(0) scaleX(1);
+    }
+}
+
+@keyframes brella-1-rotation {
+    0% {
+        transform: rotate(0deg) translateY(0%) translateX(0);
+    }
+    60% {
+        transform: rotate(0deg) translateY(0%) translateX(0);
+    }
+    70% {
+        transform: rotate(4deg) translateY(-2%) translateX(2%);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0%);
+    }
+}
+
+@keyframes brella-2-rotation {
+    0% {
+        transform: rotate(0deg) translateY(0%) translateX(0);
+    }
+    40% {
+        transform: rotate(0deg) translateY(0%) translateX(0);
+    }
+    50% {
+        transform: rotate(-4deg) translateY(2%) translateX(-2%);
+    }
+    90% {
+        transform: rotate(0deg) translateY(0%) translateX(0);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0%) translateX(0);
     }
 }
