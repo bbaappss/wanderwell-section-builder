@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background: #eddfc7; }
+
+.animation-container {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  aspect-ratio: 940 / 460;
+  height: auto; }
+
+.object {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased; }
+  .object.shoe {
+    z-index: 1;
+    bottom: 5%;
+    width: 90%; }
+  .object.bird {
+    left: auto;
+    right: 17%;
+    bottom: 48%; }
+  .object.brella-1 {
+    right: auto;
+    left: -5%;
+    bottom: 36%;
+    z-index: 1; }
+  .object.brella-2 {
+    right: auto;
+    left: 15%;
+    bottom: 36%; }
+
+/*# sourceMappingURL=style.css.map */
