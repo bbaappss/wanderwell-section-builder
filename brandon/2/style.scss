@@ -34,41 +34,45 @@ body {
     }
 
     &.bird-1 {
+        animation: bird-1-movement-loop 10s ease-in-out infinite;
+        bottom: 14%;
         left: auto;
         right: 27%;
-        bottom: 14%;
-        animation: bird-1-movement-loop 10s ease-in-out infinite;
+        width: 16%;
     }
 
     &.bird-2 {
-        left: auto;
-        right: 16%;
-        bottom: 47%;
         animation: bird-2-movement-loop 15s ease-in-out infinite;
+        bottom: 45%;
+        left: auto;
+        right: 12%;
+        width: 16%;
     }
 
     &.bird-3 {
+        animation: bird-3-movement-loop 10s ease-in-out infinite;
+        bottom: 27%;
         left: 35%;
         right: auto;
-        bottom: 27%;
         transform: scaleX(-1);
-        animation: bird-3-movement-loop 10s ease-in-out infinite;
+        width: 16%;
     }
 
     &.brella-1 {
-        z-index: 2;
-        right: auto;
-        left: 0%;
-        bottom: 39%;
         animation: brella-1-rotation 10s infinite linear;
+        bottom: 39%;
+        left: 4%;
+        right: auto;
+        width: 28%;
+        z-index: 2;
     }
 
     &.brella-2 {
         z-index: 1;
         right: auto;
-        left: 21%;
+        left: 23%;
         width: 14%;
-        bottom: 42%;
+        bottom: 41%;
         animation: brella-2-rotation 10s infinite linear;
     }
 }
@@ -209,7 +213,7 @@ body {
         transform: rotate(0deg) translateY(0%) translateX(0);
     }
     50% {
-        transform: rotate(-4deg) translateY(2%) translateX(-2%);
+        transform: rotate(-6deg) translateY(2%) translateX(-3%);
     }
     90% {
         transform: rotate(0deg) translateY(0%) translateX(0);
